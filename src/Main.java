@@ -9,7 +9,6 @@ public class Main {
                 CNPJ: 00.000.0000/00
                 Endereço:
                 """;
-
         while (true) {
             System.out.println(cabecalhoEmpresa);
             String funcao = """
@@ -20,8 +19,37 @@ public class Main {
                     4. Sênior
                     0. Sair
                     """;
+            String beneficiosDesc = """
+                    Benefícios e seus determinados descontos: 
+                    1. Trainne: 
+                    - V.T: - 9% 
+                    - Plano de saúde : - 10%
+                    - Dependentes plano de saúde: - 20%
+                    - Previdência Social: - 7,5%
+                    
+                    2. Júnior: 
+                    - Aux. home. office: + R$ 200,00
+                    - Plano de saúde : - 10%
+                    - Dependentes plano de saúde: - 20%
+                    - Previdência Social: - 7,5%
+                    
+                    3. Pleno: 
+                    - Aux. home. office: + R$ 200,00
+                    - Plano de saúde : - 10%
+                    - Dependentes plano de saúde: - 20%
+                    - Previdência Social: - 7,5%
+                    - IRPF: - 15%
+                    
+                    4.Sênior:
+                    - Aux. home. office: + R$ 200,00
+                    - Plano de saúde : - 10%
+                    - Dependentes plano de saúde: - 20%
+                    - Previdência Social: - 7,5%
+                    - IRPF: - 22,5%
+                    """;
+            System.out.println(beneficiosDesc);
+            System.out.println("*************************************");
             System.out.println(funcao);
-
             double Salariobase = 1518;
             int idfuncao = sc.nextInt();
 
@@ -55,5 +83,6 @@ public class Main {
             }
         }
         sc.close();
+        //puxar os arquivos do repositório remoto para local - REadme
     }
 }
