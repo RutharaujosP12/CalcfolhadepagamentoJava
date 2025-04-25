@@ -53,36 +53,38 @@ public class Main {
             double Salariobase = 1518;
             int idfuncao = sc.nextInt();
 
-            if (idfuncao == 1) {
-                System.out.println("Salário Bruto (Nível Trainee): R$" + Salariobase);
-                break;
-            } else if (idfuncao == 2) {
-                double AdcSalj = Salariobase * 70 / 100;
-                double SalBrutoJ = AdcSalj + Salariobase;
-                System.out.println("Salário Bruto (Nível Júnior): R$" + SalBrutoJ);
-                break;
-            } else if (idfuncao == 3) {
-                double AdcSalP = Salariobase * 190 / 100;
-                double SalBrutoP = AdcSalP + Salariobase;
-                System.out.println("Salário Bruto (Nível Pleno): R$" + SalBrutoP);
-                break;
-            } else if (idfuncao == 4) {
-                double AdcSalS = Salariobase * 230 / 100;
-                double SalBrutoS = AdcSalS + Salariobase;
-                System.out.println("Salário Bruto (Nível Sênior): R$" + SalBrutoS);
-                break;
-            } else if (idfuncao == 0) {
-                System.out.println("Você saiu do sistema.");
-                break;
-            } else {
-                String mensagemAtencao = """
-                        Opção Inválida!
-                        Por favor, reveja as opções e selecione novamente!
-                        """;
-                System.out.println(mensagemAtencao);
+            switch (idfuncao) {
+                case 0:
+                    System.out.println("Você saiu do sistema");
+                    sc.close();
+                    return;
+                case 1:
+                    System.out.println("Salário Bruto (Nível Trainee): R$" + Salariobase);
+                    break;
+                case 2:
+                    double AdcSalj = Salariobase * 70 / 100;
+                    double SalBrutoJ = AdcSalj + Salariobase;
+                    System.out.println("Salário Bruto (Nível Júnior): R$" + SalBrutoJ);
+                    break;
+                case 3:
+                    double AdcSalP = Salariobase * 190 / 100;
+                    double SalBrutoP = AdcSalP + Salariobase;
+                    System.out.println("Salário Bruto (Nível Pleno): R$" + SalBrutoP);
+                    break;
+                case 4:
+                    double AdcSalS = Salariobase * 230 / 100;
+                    double SalBrutoS = AdcSalS + Salariobase;
+                    System.out.println("Salário Bruto (Nível Sênior): R$" + SalBrutoS);
+                    break;
+                default:
+                    String mensagemAtencao = """
+                            Opção Inválida!
+                            Por favor, reveja as opções e selecione novamente!
+                            """;
+                    System.out.println(mensagemAtencao);
+            }
+                sc.close();
             }
         }
-        sc.close();
-        //puxar os arquivos do repositório remoto para local - REadme
     }
-}
+
